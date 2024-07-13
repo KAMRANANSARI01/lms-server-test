@@ -17,14 +17,14 @@ app.use(express.urlencoded({extended:true}))//its used to get qury param from en
 //     origin:[process.env.FRONTEND_URL],
 //     Credentials:true
 // }))
-app.use(cors({
-    origin: 'http://localhost:5173', // Specify the allowed origin directly
-    credentials: true,
-  }));
 // app.use(cors({
-//     origin: 'https://lms-frontend-ashy.vercel.app', // Specify the allowed origin directly
+//     origin: 'http://localhost:5173', // Specify the allowed origin directly
 //     credentials: true,
 //   }));
+app.use(cors({
+    origin: 'https://lms-kamran.vercel.app/', // Specify the allowed origin directly
+    credentials: true,
+  }));
 app.use(cookieParser())
 app.use(morgan('dev'))
 // Server Status Check Route
